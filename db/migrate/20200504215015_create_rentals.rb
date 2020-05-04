@@ -1,6 +1,7 @@
-class BikeRental < ActiveRecord::Migration[6.0]
+class CreateRentals < ActiveRecord::Migration[6.0]
   def change
-    create_table :bike_rentals do |t|
+    create_table :rentals do |t|
+
       t.integer :bike_id
       t.integer :renter_id
       t.integer :shop_id
@@ -12,6 +13,5 @@ class BikeRental < ActiveRecord::Migration[6.0]
       t.timestamps
 
     end
-
   end
 end

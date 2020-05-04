@@ -5,6 +5,7 @@ class CreateShops < ActiveRecord::Migration[6.0]
       t.string :location
 
       t.timestamps
+
     end
   end
 end
