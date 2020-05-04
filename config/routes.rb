@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :renters
   resources :shops
   resources :rentals
   resources :bikes

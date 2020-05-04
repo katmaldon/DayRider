@@ -4,7 +4,7 @@ class CreateBikes < ActiveRecord::Migration[6.0]
       t.string :model
       t.integer :size
       t.string :bike_type
-      t.integer :user_id
+      t.integer :owner_id
 
       t.timestamps
     end
