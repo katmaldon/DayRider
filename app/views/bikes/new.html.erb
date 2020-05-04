@@ -1,0 +1,15 @@
+<h1>add bike</h1>
+
+<br><br>
+<%= form_for @bike do |f| %>
+  <%= f.label 'Bike model' %><br>
+  <%= f.text_field :model %><br>
+<br><br>
+  <%= f.label 'Bike size' %><br>
+  <%= f.text_area :size %><br>
+<br><br>
+  <%= f.label 'Bike type' %><br>
+  <%= f.text_area :bike_type %><br>
+<br><br>
+  <%= f.submit "Submit" %>
+<% end %>

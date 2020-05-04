@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_05_04_215015) do
 
   create_table "bikes", force: :cascade do |t|
-    t.string "module"
+    t.string "model"
     t.integer "size"
     t.string "bike_type"
     t.datetime "created_at", precision: 6, null: false
