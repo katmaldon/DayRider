@@ -14,7 +14,7 @@
 
 - most popular bikes
 
-- avilability filter
+- avilability filter on bike index
 
 - create rental form
 
