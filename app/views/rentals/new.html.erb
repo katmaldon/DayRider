@@ -1,6 +1,6 @@
 <h1>New Bike Rental Form</h1>
 
-<%= form_for @bike_rental do |f| %>
+<%= form_for @rental do |f| %>
     <%= f.label :shop_id %>
     <%= f.collection_select :shop_id, @shops, :id, :name %> <br>
 
