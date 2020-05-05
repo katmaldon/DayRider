@@ -33,8 +33,6 @@ DayRider provides an accessible and intuitive user interface through clear routi
 This app was built as a Flatiron School Mod2 Rails project. It includes design elements built with HTML, CSS, and Bootstrap, as well as authentication and authorization functionality through bcrypt.
 
 
-
-
 #### **Upcoming features:**
 
 - allowing users to buy bikes on external sites through use of APIsif they particularly enjoyed a particular rental
