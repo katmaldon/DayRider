@@ -1,0 +1,21 @@
+<h1>Edit Bike Rental Form</h1>
+
+<%= form_for @bike_rental do |f| %>
+    <%= f.label :shop_id %>
+    <%= f.collection_select :shop_id, @shops, :id, :name %> <br>
+
+    <%= f.label :renter_id %>
+    <%= f.collection_select :renter_id, @renters, :id, :name %> <br>
+
+    <%= f.label :bike_id %>
+    <%= f.collection_select :bike_id, @bikes, :id, :model %> <br>
+
+    <%= f.label :price %>
+    <%= f.number_field :price %> <br>
+
+    <%= f.label :day %>
+    <%= f.text_field :day%> <br>
+
+    <%= f.submit 'Edit Rental' %>
+
+<% end %>
