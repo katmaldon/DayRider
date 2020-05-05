@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  background-image: url("https://www.itl.cat/pngfile/big/22-228592_bicycle-art-wallpapers-hd-resolution-is-4k-wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left;
+  background-color:white;
+  background-size: 100%;
+  color: black;
+  text-align: right;
+}
+#a hash syntax styles anchor tags
+a {
+  text-decoration: none;
+  font-family: Palanquin;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+a:link {
+  color: black;
+}
+a:hover {
+  color: yellowgreen;
+}
+a:visited {
+  color: darkolivegreen;
+}
+h1{
+}
+/* #if you set a div with a classname you can select it with dot notation ex: <div class="container"> . </div>
+you would select with .<classname>
+.container {
+}
+#selecting a anchor tag within a nav tag <nav> <%=link_to "whatever", user_path</nav>
+.nav a {                     <<<<can access nested tags this way
+} */
