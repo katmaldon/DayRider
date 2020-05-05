@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :renters
-  resources :shops
+  resources :shops, only: [:index, :show]
   resources :rentals
   resources :bikes
   resources :users

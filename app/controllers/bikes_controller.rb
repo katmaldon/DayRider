@@ -28,11 +28,15 @@ class BikesController < ApplicationController
   end
 
   def update
-
+    @bike = Bike.find(params[:id])
+    @bike.update(bike_params)
+    redirect_to bike_path(@bike)
   end
 
   def delete
-
+    @bike = Bike.find(params[:id])
+    @bike.destroy
+    redirect_to bikes_path
   end
 
 
