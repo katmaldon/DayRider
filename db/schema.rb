@@ -12,6 +12,18 @@
 
 ActiveRecord::Schema.define(version: 2020_05_04_215015) do
 
+  create_table "bike_rentals", force: :cascade do |t|
+    t.integer "bike_id"
+    t.integer "renter_id"
+    t.integer "shop_id"
+    t.float "price"
+    t.date "day"
+    t.string "comment"
+    t.float "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "bikes", force: :cascade do |t|
     t.string "module"
     t.integer "size"
@@ -24,18 +36,6 @@ ActiveRecord::Schema.define(version: 2020_05_04_215015) do
     t.string "name"
     t.integer "age"
     t.string "location"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "rentals", force: :cascade do |t|
-    t.integer "bike_id"
-    t.integer "renter_id"
-    t.integer "shop_id"
-    t.float "price"
-    t.date "day"
-    t.string "comment"
-    t.float "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
