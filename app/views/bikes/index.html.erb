@@ -1,7 +1,10 @@
 <h1> bikes index </h1>
 
-#random test code for css: (not working as planned but it's a start... hahaha)
-
-  <h4><%= link_to "Bike #1", shops_path%></h4>
+<ul>
+<% @bikes.each do | bike | %>
+  <h3>Model:  <%= link_to bike.model, bike_path(bike)%></h3>
+  <p>Size: <%= bike.size%></p>
+<%end%>
+</ul>
 
 
