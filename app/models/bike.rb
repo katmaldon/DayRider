@@ -4,4 +4,13 @@ class Bike < ApplicationRecord
   has_many :rentals
   has_many :renters, through: :rentals
 
+  def reserve
+    self.availability? != self.availability?
+  end
+
+  def self.available_bikes
+    Bike.all.select {|bike| bike.availability? == true}
+  end
+  
+
 end

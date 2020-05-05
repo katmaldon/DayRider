@@ -17,7 +17,7 @@ end
 
 30.times do
     Bike.create(owner: Owner.all.sample, model: Faker::Vehicle.model, size: rand(1..8), 
-        bike_type: bike_type.sample
+        bike_type: bike_type.sample, availability?: Faker::Boolean.boolean
     )
     Rental.create(bike: Bike.all.sample, renter: Renter.all.sample, shop: Shop.all.sample, 
         price: Faker::Number.decimal, day: days.sample, comment: Faker::Restaurant.review,
