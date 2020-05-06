@@ -1,6 +1,13 @@
 class OwnersController < ApplicationController
 
-    def show
-        @owner = Owner.find(params[:id])
+    def index
+      @owners = Owner.all
+      #@bikes = Owner.bike.all
     end
+
+    def show
+      @owner = Owner.find(params[:id])
+
+    end
+
 end
