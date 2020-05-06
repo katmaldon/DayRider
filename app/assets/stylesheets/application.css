@@ -14,6 +14,16 @@
  *= require_self
  */
 
+ h1 {
+  background-color:black;
+  background-size: 100%;
+  color: whitesmoke;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+
+ }
+
  body {
   background-image: url("https://www.itl.cat/pngfile/big/22-228592_bicycle-art-wallpapers-hd-resolution-is-4k-wallpaper.jpg");
   background-repeat: no-repeat;
@@ -24,7 +34,7 @@
   color: whitesmoke;
   text-align: right;
 }
-#a hash syntax styles anchor tags
+
 a {
   text-decoration: none;
   font-family: Palanquin;
