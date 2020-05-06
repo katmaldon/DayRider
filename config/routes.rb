@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   resources :shops, only: [:index, :show]
   resources :renters, only: [:index, :show, :new, :create]
   resources :rentals, except: [:index]
-  resources :owners, only: [:show]
-  resources :rentals
   resources :owners, only: [:show, :index]
   resources :shops
   get "/bikes/availability", to: "bikes#availability", as: "availability"

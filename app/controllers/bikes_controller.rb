@@ -7,6 +7,7 @@ class BikesController < ApplicationController
   end
 
   def show
+    session[:bike] = @bike
   end
 
   def new
