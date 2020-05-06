@@ -21,7 +21,7 @@ class RentalsController < ApplicationController
         bike_id_value = session[:bike]["id"]
         # renter_id_value = session[:renter]["id"]
         # byebug
-        @rental = Rental.create(shop_id: 75, renter_id:72, bike_id: bike_id_value)
+        @rental = Rental.create(renter_id:20, bike_id: bike_id_value)
         redirect_to rental_path(@rental.id)
     end
     

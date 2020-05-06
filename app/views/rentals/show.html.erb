@@ -1,7 +1,7 @@
 <h1>Bike Rental Instance Page</h1>
 <%= @rental.bike.model %> <br>
 <%= @rental.renter.name %> <br>
-<%= @rental.shop.name %> <br>
+<%= @rental.renter.shop.location%> <br>
 <% if @rental.comment && @rental.rating %>
     <%= @rental.comment %> <br>
     <%= @rental.rating %> Rating

@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_211525) do
+ActiveRecord::Schema.define(version: 2020_05_04_215015) do
 
   create_table "bikes", force: :cascade do |t|
     t.integer "owner_id"
     t.string "model"
     t.integer "size"
     t.string "bike_type"
+    t.boolean "availability?", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "availability?", default: false
   end
 
   create_table "owners", force: :cascade do |t|
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2020_05_05_211525) do
   create_table "rentals", force: :cascade do |t|
     t.integer "bike_id"
     t.integer "renter_id"
-    t.integer "shop_id"
     t.float "price"
     t.date "day"
     t.string "comment"
@@ -45,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_05_05_211525) do
   create_table "renters", force: :cascade do |t|
     t.string "name"
     t.integer "age"
-    t.string "location"
+    t.integer "shop_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

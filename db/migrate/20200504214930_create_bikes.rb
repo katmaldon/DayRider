@@ -5,7 +5,8 @@ class CreateBikes < ActiveRecord::Migration[6.0]
       t.string :model
       t.integer :size
       t.string :bike_type
-
+      t.boolean :availability?, default: false
+      
       t.timestamps
 
     end

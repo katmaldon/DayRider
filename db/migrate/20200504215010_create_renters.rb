@@ -3,7 +3,7 @@ class CreateRenters < ActiveRecord::Migration[6.0]
     create_table :renters do |t|
       t.string :name
       t.integer :age
-      t.string :location
+      t.integer :shop_id
 
       t.timestamps
 

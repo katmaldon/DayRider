@@ -4,7 +4,6 @@ class CreateRentals < ActiveRecord::Migration[6.0]
 
       t.integer :bike_id
       t.integer :renter_id
-      t.integer :shop_id
       t.float :price
       t.date :day
       t.string :comment, default: nil
