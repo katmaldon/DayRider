@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_05_05_211525) do
     t.string "bike_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "availability?"
+    t.boolean "availability?", default: false
   end
 
   create_table "owners", force: :cascade do |t|

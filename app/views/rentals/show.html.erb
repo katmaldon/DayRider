@@ -1,1 +1,12 @@
 <h1>Bike Rental Instance Page</h1>
+<%= @rental.bike.model %> <br>
+<%= @rental.renter.name %> <br>
+<%= @rental.shop.name %> <br>
+<% if @rental.comment && @rental.rating %>
+    <%= @rental.comment %> <br>
+    <%= @rental.rating %> Rating
+<% end %>
+
+<%= button_to "Post a Comment & Rating", edit_rental_path(@rental), method: :get %>
+
+<%= button_to "Delete Rental", rental_path(@rental), method: :delete %>

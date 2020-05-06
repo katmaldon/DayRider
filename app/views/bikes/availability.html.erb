@@ -1,0 +1,10 @@
+<h1> Available Bikes Index </h1>
+
+<%= link_to 'Back to All Bikes', bikes_path %>
+
+<ul>
+<% @available_bikes.each do | bike | %>
+  <h3>Model:  <%= link_to bike.model, bike_path(bike)%></h3>
+  <p>Size: <%= bike.size%></p>
+<%end%>
+</ul>
