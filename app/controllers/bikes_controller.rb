@@ -1,7 +1,7 @@
 class BikesController < ApplicationController
 
   before_action :find_bike, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @bikes = Bike.all
   end
@@ -13,16 +13,16 @@ class BikesController < ApplicationController
     @bike = Bike.new
   end
 
-  def create
-    @bike = Bike.create(bike_params)
-    #if @bike.valid?
-      #flash[:success] = "Your bike was added."
-      redirect_to bike_path(@bike)
-    #else
-      #flash[:my_errors] = bike.errors.full_message
-      #redirect_to new_bike_path
-    #end
-  end
+  # def create
+  #   @bike = Bike.create(bike_params)
+  #   #if @bike.valid?
+  #     #flash[:success] = "Your bike was added."
+  #     redirect_to bike_path(@bike)
+  #   #else
+  #     #flash[:my_errors] = bike.errors.full_message
+  #     #redirect_to new_bike_path
+  #   #end
+  # end
 
   def edit
   end
@@ -40,7 +40,7 @@ class BikesController < ApplicationController
   def availability
     @available_bikes = Bike.available_bikes
   end
-  
+
 
 
   private
