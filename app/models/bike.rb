@@ -4,6 +4,12 @@ class Bike < ApplicationRecord
   has_many :rentals
   has_many :renters, through: :rentals
 
+  # validates :owner_id, presence: true
+  # validates :model, presence: true
+  # validates :size, numericality {only_integer: true}
+  # validates :bike_type, presence: true
+
+
   def reserve
     self.availability? != self.availability?
   end
@@ -11,6 +17,6 @@ class Bike < ApplicationRecord
   def self.available_bikes
     Bike.all.select {|bike| bike.availability? == true}
   end
-  
+
 
 end
