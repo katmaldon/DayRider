@@ -10,15 +10,16 @@
 
 <!-- - comments -->
 
-- ratings (indv./avg.)
+<!-- - ratings (indv./avg.) -->
     <!-- - rating for the rental the only one we have so far -->
 
 - nav bar or drop down menu
 
 - most popular bikes
+    - Have a random featured bike, can't get the most popular bike to work :'(
 
-- avilability filter on bike index
-    - we have a filter just not a filter by date
+<!-- - avilability filter on bike index -->
+    <!-- - we have a filter just not a filter by date -->
 
 
 <!-- - create rental form -->
