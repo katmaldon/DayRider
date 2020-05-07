@@ -1,9 +1,10 @@
 <h1>Renter Details</h1>
 <br>
+
 <h2><%= @renter.name %></h2>
 <p><%= @renter.age %>
 <br><%= @renter.shop.name %></p>
 <br><br><br>
-<%= link_to 'Reserve a bike', bikes_path %>
+<%= link_to 'log out', logout_path, method: :delete %>
 
-#needs button (maybe)
+

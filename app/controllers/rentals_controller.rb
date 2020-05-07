@@ -11,8 +11,8 @@ class RentalsController < ApplicationController
 
     def create
         bike_id_value = session[:bike]["id"]
-        # renter_id_value = session[:renter]["id"]
-        @rental = Rental.create(renter_id: 70, bike_id: bike_id_value)
+        renter_id_value = session[:renter_id]
+        @rental = Rental.create(renter_id: renter_id_value, bike_id: bike_id_value)
         # byebug
         redirect_to rental_path(@rental.id)
     end

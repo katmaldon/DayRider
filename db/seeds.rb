@@ -34,7 +34,7 @@ Shop.create(name: "718 Cyclery", location: "Park Slope")
 end
 
 20.times do
-    Renter.create(name: Faker::Name.name, age: rand(16..28), shop: Shop.all.sample)
+    Renter.create(name: Faker::Name.name, age: rand(16..28), shop: Shop.all.sample, password: "123")
     Bike.create(owner: Owner.all.sample, model: model.sample, size: size.sample,
         bike_type: bike_type.sample, availability?: Faker::Boolean.boolean
     )
