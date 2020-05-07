@@ -12,7 +12,7 @@ size = [ 24, 26, 28 ]
 
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-Shop.create(name: "NYC Velo", location: "West Village")
+Shop.create(name: "NYC Velo", location: "Hell's Kitchen")
 Shop.create(name: "Habitat", location: "Chelsea")
 Shop.create(name: "Frank's", location: "LES")
 Shop.create(name: "Ride Brooklyn", location: "Boerum Hill")
