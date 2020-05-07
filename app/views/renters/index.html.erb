@@ -2,8 +2,8 @@
 <br><br>
 <% @renters.each do |renter| %>
   <p> <%= link_to renter.name, renter_path(renter) %>
-  <br> <%= renter.age %>
-  <br> <%= renter.shop.name %>
+  <br> Age: <%= renter.age %>
+  <br> Location: <%= renter.shop.location %>
 <%end%>
 <br>
 </p>

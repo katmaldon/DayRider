@@ -3,7 +3,7 @@
 <%= link_to 'Show available bikes', availability_path %>
 <br>
 <% @bikes.each do | bike | %>
-  <p> Model: <%= link_to bike.model, bike_path(bike)%>
+  <p> Brand: <%= link_to bike.model, bike_path(bike)%>
   <br> Type: <%= bike.bike_type%>, Size: <%=bike.size%>
 <%end%>
 <br>
