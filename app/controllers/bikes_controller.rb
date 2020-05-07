@@ -12,18 +12,22 @@ class BikesController < ApplicationController
 
   def new
     @bike = Bike.new
+    @bike_types = Bike.all.map {|bike| bike.bike_type}.uniq
+    @models = Bike.all.map {|bike| bike.model}.uniq
+    @sizes = Bike.all.map {|bike| bike.size}.uniq
   end
 
-  # def create
-  #   @bike = Bike.create(bike_params)
-  #   #if @bike.valid?
-  #     #flash[:success] = "Your bike was added."
-  #     redirect_to bike_path(@bike)
-  #   #else
-  #     #flash[:my_errors] = bike.errors.full_message
-  #     #redirect_to new_bike_path
-  #   #end
-  # end
+  def create
+    raise params.inspect
+    @bike = Bike.create(bike_params)
+    #if @bike.valid?
+      #flash[:success] = "Your bike was added."
+      redirect_to bike_path(@bike)
+    #else
+      #flash[:my_errors] = bike.errors.full_message
+      #redirect_to new_bike_path
+    #end
+  end
 
   def edit
   end

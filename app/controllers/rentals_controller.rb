@@ -9,24 +9,17 @@ class RentalsController < ApplicationController
     def show
     end
 
-    def new
-        @rental = Rental.new
-        @shops = Shop.all
-        @renters = Renter.all
-        @bikes = Bike.available_bikes
-    end
-
     def create
         bike_id_value = session[:bike]["id"]
         # renter_id_value = session[:renter]["id"]
+        @rental = Rental.create(renter_id: 70, bike_id: bike_id_value)
         # byebug
-        @rental = Rental.create(renter_id:20, bike_id: bike_id_value)
         redirect_to rental_path(@rental.id)
     end
 
     def edit
     end
-
+    
     def update
         @rental.update(rental_params(:comment, :rating))
         redirect_to rental_path(@rental)
@@ -34,7 +27,7 @@ class RentalsController < ApplicationController
 
     def destroy
         @rental.destroy
-        redirect_to new_rental_path
+        redirect_to bikes_path
     end
 
 

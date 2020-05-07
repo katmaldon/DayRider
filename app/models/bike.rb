@@ -15,15 +15,19 @@ class Bike < ApplicationRecord
   end
 
   def group_ratings
-    rentals.select {|rental| rental.rating unless rental.rating == nil}
+    self.rentals.select {|rental| rental.rating unless rental.rating.nil?}
   end
   
   def array_of_ratings
-    group_ratings.map {|rental| rental.rating}
+    unless self.rentals.empty?
+      self.group_ratings.map {|rental| rental.rating}
+    end
   end
 
   def average_rating
-    array_of_ratings.sum/ array_of_ratings.count
+    unless self.rentals.empty?
+      array_of_ratings.sum/ array_of_ratings.count
+    end
   end
   
   
@@ -31,8 +35,20 @@ class Bike < ApplicationRecord
     Bike.all.select {|bike| bike.availability? == true}
   end
 
-  def self.random_bike_instance
-    Bike.all.sample    
+  def self.bikes_with_ratings
+    Bike.all.select do |bike| 
+      unless bike.group_ratings.empty?
+        bike.group_ratings
+      end
+    end
   end
+  
+  # def self.most_popular_bike
+  #   Bike.bikes_with_ratings.sort_by { |bike| bike.}
+  # end
+  # Bike.all.sort_by {|bike| bike.average_rating}
+  # def self.random_bike_instance
+  #   Bike.all.sample
+  # end
 
 end

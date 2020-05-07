@@ -30,7 +30,7 @@
 
 - log out
 
-- delete buttons >> delete rental is broken
+<!-- - delete buttons >> delete rental is broken -->
 
 addtnl. KAT NOTES:
 

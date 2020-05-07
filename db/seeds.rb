@@ -38,7 +38,7 @@ end
     Bike.create(owner: Owner.all.sample, model: model.sample, size: size.sample,
         bike_type: bike_type.sample, availability?: Faker::Boolean.boolean
     )
-    Rental.create(bike: Bike.all.sample, renter: Renter.all.sample, price: rand(10..30),
+    Rental.create(bike: Bike.all.sample, renter: Renter.all.sample, price: rand(10.0..30.0),
         day: days.sample, comment: Faker::Quotes::Shakespeare.as_you_like_it_quote, rating: rand(1..5)
     )
 end
