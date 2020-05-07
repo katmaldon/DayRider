@@ -18,6 +18,16 @@ Shop.create(name: "Frank's", location: "LES")
 Shop.create(name: "Ride Brooklyn", location: "Boerum Hill")
 Shop.create(name: "718 Cyclery", location: "Park Slope")
 
+# https://www.nycvelo.com/
+
+# https://www.bicyclehabitat.com/
+
+# http://www.franksbikes.com/
+
+# https://www.ridebrooklynny.com/
+
+# http://www.718c.com/
+
 
 15.times do
   Owner.create(name: Faker::Name.name, age: rand(18..50), location: Shop.all.sample.location)
@@ -28,7 +38,7 @@ end
     Bike.create(owner: Owner.all.sample, model: model.sample, size: size.sample,
         bike_type: bike_type.sample, availability?: Faker::Boolean.boolean
     )
-    Rental.create(bike: Bike.all.sample, renter: Renter.all.sample, price: rand(10.0..30.0),
-        day: days.sample, comment: Faker::Restaurant.review, rating: rand(1..5)
+    Rental.create(bike: Bike.all.sample, renter: Renter.all.sample, price: rand(10..30),
+        day: days.sample, comment: Faker::Quotes::Shakespeare.as_you_like_it_quote, rating: rand(1..5)
     )
 end
