@@ -3,8 +3,11 @@ class Renter < ApplicationRecord
   has_many :rentals
   has_many :bikes, through: :rentals
 
-  # validates :name, :location, presence: true
-  # validates :age, numericality: {greater_than_or_equal_to: 18}
+  has_secure_password
+
+  # validates :name, presence: true
+  # validates :age, numericality {only_integer: true, greater_than_or_equal_to: 17}
+  # validates :location, presence: true
 
 
 end

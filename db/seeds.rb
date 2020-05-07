@@ -38,10 +38,10 @@ end
 
 
 20.times do
-  Renter.create(name: Faker::Name.name, age: rand(18..50), shop: Shop.all.sample)
-  Bike.create(owner: Owner.all.sample, model: model.sample, size: size.sample,
-     bike_type: bike_type.sample, availability?: Faker::Boolean.boolean, bike_img: bike_image.sample)
-
+    Renter.create(name: Faker::Name.name, age: rand(16..28), shop: Shop.all.sample, password: "123")
+    Bike.create(owner: Owner.all.sample, model: model.sample, size: size.sample,
+        bike_type: bike_type.sample, availability?: Faker::Boolean.boolean, bike_img: bike_image.sample
+    )
     Rental.create(bike: Bike.all.sample, renter: Renter.all.sample, price: rand(10.0..30.0),
         day: days.sample, comment: Faker::Quotes::Shakespeare.as_you_like_it_quote, rating: rand(1..5)
     )
