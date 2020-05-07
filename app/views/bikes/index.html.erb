@@ -1,13 +1,12 @@
-<h1> Bikes </h1>
-
+<h1> All Bikes </h1>
 <br><br>
-
 <%= link_to 'Show available bikes', availability_path %>
-
-<li>
+<br>
 <% @bikes.each do | bike | %>
-  <h5> Model: <%= link_to bike.model, bike_path(bike)%> , size: <%=bike.size%></h5>
+  <p> Model: <%= link_to bike.model, bike_path(bike)%>
+  <br> Type: <%= bike.bike_type%>, Size: <%=bike.size%>
 <%end%>
-</li>
+<br>
+</p>
 
 

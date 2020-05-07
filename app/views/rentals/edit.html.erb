@@ -1,13 +1,19 @@
-<h1>Edit Bike Rental Form</h1>
+<h1>Leave a comment and rating</h1>
+<br>
+<h2><%= @rental.bike.model %> </h2><br>
+<p><%= @rental.renter.name %> <br>
+<%= @rental.renter.shop.location%> <br><br>
 
 <%= form_for @rental do |f| %>
 
     <%= f.label :comment %>
     <%= f.text_area :comment %> <br>
-
+    <br>
+    <br>
     <%= f.label :rating %>
     <%= f.number_field :rating%> <br>
-
-    <%= f.submit 'Edit Rental' %>
+    <br>
+    <br>
+    <%= f.submit 'Submit comment and rating' %>
 
 <% end %>

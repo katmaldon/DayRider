@@ -1,7 +1,9 @@
-
+<h1>All Bike Owners</h1>
+<br><br>
 <% @owners.each do |owner| %>
   <p> <%= link_to owner.name, owner_path(owner) %>
-  <br> <%= owner.age %>
-  <br> <%= owner.location %>
+  <br> Age: <%= owner.age %>
+  <br> Location: <%= owner.location %>
 <%end%>
+<br>
 </p>

@@ -3,10 +3,10 @@
 <%= link_to 'Back to All Bikes', bikes_path %>
 <br><br>
 
-<ul>
+
 <% @available_bikes.each do | bike | %>
-  <h3>Model:  <%= link_to bike.model, bike_path(bike)%></h3>
-  <p>Size: <%= bike.size%></p>
+  <h2>Model:  <%= link_to bike.model, bike_path(bike)%></h2>
+  <p>Type: <%= bike.bike_type %>, Size: <%= bike.size%></p>
 <%end%>
-</ul>
+
 
