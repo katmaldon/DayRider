@@ -1,1 +1,7 @@
-<h1>Renter's Show Page</h1>
+
+<h1><%= @renter.name %></h1>
+<p><%= @renter.age %><br><%= @renter.shop.name %></p>
+<br><br><br>
+<%= link_to 'Reserve a bike', bikes_path %>
+
+#needs button maybe
