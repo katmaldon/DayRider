@@ -7,9 +7,54 @@
 
     <%= stylesheet_link_tag 'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #666666;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 6px 8px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #778899;
+}
+
+.active {
+  background-color: 009999;
+}
+</style>
+</head>
+
+<body>
+
+  <ul>
+    <li style="float:left"><a class="active" href="">Home</a></li>
+
+    <li><a href="bikes#index">Bikes</a></li>
+
+    <li><a href="shops#index">Shops</a></li>
+    <li><a href="owners#index">Owners</a></li>
+    <li><a href="renters#index">Renters</a></li>
+  </ul>
+
+  </body>
     <%= yield %>
   </body>
 </html>

@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -25,11 +26,13 @@
  }
 
  body {
+  font-family: 'Poppins', sans-serif;
+	color: #2c3e50;
   background-image: url("https://www.itl.cat/pngfile/big/22-228592_bicycle-art-wallpapers-hd-resolution-is-4k-wallpaper.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
-  background-color:white;
+  background-color: black;
   background-size: 100%;
   color: whitesmoke;
   text-align: right;
@@ -37,7 +40,7 @@
 
 a {
   text-decoration: none;
-  font-family: Palanquin;
+  font-family: 'Poppins', sans-serif;
   font-size: 30px;
   font-weight: bold;
 }
@@ -49,11 +52,7 @@ a:link {
 a:hover {
   color: yellowgreen;
 }
-a:visited {
-  color: darkolivegreen;
-}
-h1{
-}
+
 /* #if you set a div with a classname you can select it with dot notation ex: <div class="container"> . </div>
 you would select with .<classname>
 .container {
