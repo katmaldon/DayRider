@@ -38,7 +38,7 @@
 a {
   text-decoration: none;
   font-family: Palanquin;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -50,8 +50,8 @@ a:hover {
   color: yellowgreen;
 }
 a:visited {
-  color: darkolivegreen;
-}
+  color: white;
+
 h1{
 }
 /* #if you set a div with a classname you can select it with dot notation ex: <div class="container"> . </div>

@@ -1,16 +1,21 @@
-<h1>New Renter Form</h1>
-
+<h1>Create new renter account:</h1>
+<br><br><br>
 <%= form_for @renter do |f| %>
-
+    <br>
     <%= f.label :name %>
-    <%= f.text_field :name %> <br>
-
+    <%= f.text_field :name %>
+    <br>
+    <br>
     <%= f.label :age %>
-    <%= f.number_field :age %> <br>
-
-    <%= f.label :location %>
-    <%= f.text_field :location %> <br>
-
-    <%= f.submit 'Create New User' %>
+    <%= f.number_field :age %>
+    <br>
+    <br>
+    <%= f.label :shop %>
+    <%= f.collection_select :shop_id, @shops, :id, :name %>
+    <br>
+    <br>
+    <%= f.submit 'Create new renter' %>
 
 <% end %>
+
+

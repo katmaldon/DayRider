@@ -1,14 +1,21 @@
+<h1> Bike Details </h1>
+
 <br>
-<h1><%= "Model: #{@bike.model}, size: #{@bike.size}"%></h1>
+<h2><%= "Brand: #{@bike.model}, size: #{@bike.size}"%></h2>
+<p><%= "Type: #{@bike.bike_type}" %></p>
 <br><br>
 <h3>Rating: <%= @bike.average_rating %></h3>
 <h2>Placeholder for image?</h2>
+
+# image
+# external link to buy this bike model? (stretch)
 <br><br><br>
 
 #button to reserve bike
-<h3> <%= button_to 'create rental', rentals_path, method: :post%></h3>
+<h4> <%= button_to 'Reserve this bike', rentals_path, method: :post%></h4>
 
-<h3><%= link_to "All bikes", bikes_path %></h3>
+<h4><%= link_to "All bikes", bikes_path %></h4>
+
 
 
 

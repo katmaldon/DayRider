@@ -1,6 +1,6 @@
 <!-- - bikes show with details -->
 <!-- - owner show with details -->
-- renter show with details, 
+- renter show with details,
     - need the data renter show and index
 
 <!-- - test all routing -->
@@ -30,7 +30,27 @@
 
 - log out
 
-- delete buttons
+- delete buttons >> delete rental is broken
+
+addtnl. KAT NOTES:
+
+- websites for shops, add to db (links already in seed.rb)
+
+- change price to integer (generated prices are wild... lol)
+
+- html is solid and consistent but css is garbage, needs overhaul, maybe bootstrap?
+
+- navbar!!! (it's doing crazy things, but only sometimes)
+
+- images for bikes? kind of a pain but kind of cool.
+
+- design choices zoom for shared input
+
+- Update README
+
+
+
+
 
 
 
