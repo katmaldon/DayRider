@@ -1,18 +1,32 @@
 <h1> Bike Details </h1>
+<div>
+<% if flash[:my_errors]%>
+  <%flash[:my_errors].each do |error| %>
+  <h3><% error %></h3>
+  <%end%>
+<%end%>
+
+<% if flash[:success]%>
+
+    <h2><%flash[:succes]%></h2>
+<%end%>
+
 
 <br>
 <h2><%= "Brand: #{@bike.model}, size: #{@bike.size}"%></h2>
 <p><%= "Type: #{@bike.bike_type}" %></p>
 <br><br>
 
+<img src=<%=@bike.bike_img%> alt="Bike image" width="300" height="345">
+
 <h3>Rating: <%= @bike.average_rating %></h3>
-<h2>Placeholder for image?</h2>
+<h2> <%=@bike.bike_img%> </h2>
 
 # image
 # external link to buy this bike model? (stretch)
-<br><br><br>
+<br><br>
 
-#button to reserve bike
+
 <h4> <%= button_to 'Reserve this bike', rentals_path, method: :post%></h4>
 
 <h4><%= link_to "All bikes", bikes_path %></h4>

@@ -1,5 +1,11 @@
 <h1>Add a new bike</h1>
 
+<% if flash[:my_errors]%>
+  <%flash[:my_errors].each do |error| %>
+  <p><% error %></p>
+  <%end%>
+<%end%>
+
 <br><br>
 <%= form_for @bike do |f| %>
   <%= f.label 'Bike model' %><br>

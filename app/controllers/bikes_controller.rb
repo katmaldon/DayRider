@@ -20,13 +20,13 @@ class BikesController < ApplicationController
   def create
     raise params.inspect
     @bike = Bike.create(bike_params)
-    #if @bike.valid?
-      #flash[:success] = "Your bike was added."
+    if @bike.valid?
+      flash[:success] = "Your bike was added."
       redirect_to bike_path(@bike)
-    #else
-      #flash[:my_errors] = bike.errors.full_message
-      #redirect_to new_bike_path
-    #end
+    else
+      flash[:my_errors] = bike.errors.full_message
+      redirect_to new_bike_path
+    end
   end
 
   def edit

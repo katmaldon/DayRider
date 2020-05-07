@@ -14,12 +14,20 @@ class RentalsController < ApplicationController
         # renter_id_value = session[:renter]["id"]
         @rental = Rental.create(renter_id: 70, bike_id: bike_id_value)
         # byebug
-        redirect_to rental_path(@rental.id)
+        if @rental.valid?
+            flash[:success] = "Your reservation is confirmed!"
+            redirect_to rental_path(@rental.id)
+        else
+            flash[:my_errors] = @rental.errors.full_messages
+            redirect_to bike_path(@rental.bike_id)
+        end
     end
+
+
 
     def edit
     end
-    
+
     def update
         @rental.update(rental_params(:comment, :rating))
         redirect_to rental_path(@rental)
