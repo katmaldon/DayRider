@@ -3,7 +3,7 @@ class RentalsController < ApplicationController
     before_action :find_rental, only: [:show, :edit, :update, :destroy]
 
     def index
-        redirect_to bikes_path #placeholder to avoid routing errors
+        @rentals = Rental.all
     end
 
     def show

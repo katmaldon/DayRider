@@ -5,9 +5,9 @@ class Renter < ApplicationRecord
 
   has_secure_password
 
-  # validates :name, presence: true
-  # validates :age, numericality {only_integer: true, greater_than_or_equal_to: 17}
-  # validates :location, presence: true
+  validates :name, presence: true
+  #validates :age, numericality: greater_than_or_equal_to 18
+  #validates :location, presence: true
 
 
 end

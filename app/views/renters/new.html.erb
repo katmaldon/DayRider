@@ -1,4 +1,4 @@
-<h1>Create new renter account:</h1>
+<h1>Create new account:</h1>
 <br><br><br>
 <% if flash[:errors] %>
     <% flash[:errors].each do |error| %>
@@ -7,24 +7,25 @@
 <% end %>
 <%= form_for @renter do |f| %>
     <br>
-    <%= f.label :name %>
+    <%= f.label :name %><br>
     <%= f.text_field :name %>
     <br>
     <br>
-    <%= f.label :age %>
+    <%= f.label :age %><br>
     <%= f.number_field :age %>
     <br>
     <br>
-    <%= f.label :shop_id %>
+    <%= f.label :shop_id %><br>
     <%= f.collection_select :shop_id, @shops, :id, :name %>
     <br>
     <br>
-    <%= f.label :password %>
+    <%= f.label :password %><br>
     <%= f.password_field :password %>
     <br>
     <br>
-    <%= f.label "Create an account to start riding now" %> <br>
-    <%= f.submit 'Create Account' %>
+    <br>
+
+    <%= f.submit 'Create account to start riding now!' %>
 
 <% end %>
 

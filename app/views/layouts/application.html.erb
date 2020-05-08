@@ -55,13 +55,14 @@ li a:hover:not(.active) {
     <li><a href="shops#index">Shops</a></li>
     <li><a href="owners#index">Owners</a></li>
     <li><a href="renters#index">Renters</a></li>
+    <li><a href="rentals#index">Rentals</a></li>
   </ul>
 
 
     <%= yield %>
   </body>
 </html> -->
-  
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -73,20 +74,23 @@ li a:hover:not(.active) {
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    
-    
+
+
     <ul>
-      
+
       <% if @current_renter %>
       <li><%= link_to "Profile Page", renter_path(@current_renter.id) %></li>
       <li><%= link_to 'Bikes Home', bikes_path %></li>
       <li><%= link_to 'Shops Home', shops_path %></li>
+      <li><%= link_to 'All Rentals', rentals_path %></li>
+
         <li class='right'>Welcome <%= @current_renter.name %> </li>
         <li class='right'><%= link_to 'Log Out', logout_path, method: :delete %></li>
       <% else %>
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to 'Bikes Home', bikes_path %></li>
       <li><%= link_to 'Shops Home', shops_path %></li>
+      <li><%= link_to 'All Rentals', rentals_path %></li>
         <li class='right'><%= link_to 'Sign up', new_renter_path %></li>
         <li class='right'><%= link_to 'Log in', new_login_path %></li>
       <% end %>

@@ -1,1 +1,8 @@
 <h1>Bike Rentals Index </h1>
+
+<br><br>
+<% @rentals.each do |rental| %>
+  <p> <%= link_to rental.bike.model, rental_path(rental) %>
+<%end%>
+<br>
+</p>
