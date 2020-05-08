@@ -1,8 +1,12 @@
 
 <h1>Welcome to DayRider</h1>
-<br>
-<%= link_to 'Enter', bikes_path %>
+<br><br>
 
-_______________________________# need to get working button, keeps breaking so link_to is temp
+<div class='container'>
 
-
+    <marquee direction='right' scrollamount='15'>
+        <% @bikes.each do |bike| %>
+        <img class='show-img', src=<%=bike.bike_img %> alt="Bikes">
+      <% end %>
+    </marquee>
+  </div>

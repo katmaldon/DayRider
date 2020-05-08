@@ -37,6 +37,26 @@
 
  }
 
+ .show-img {
+  width: 30%;
+  padding: 30px;
+  border-radius: 25px;
+  background-color: rgba(177, 254, 255, 0.7);
+}
+
+
+.container {
+  background-color: rgba(255, 255, 255, 0.88  );
+  border-radius: 20px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  max-width: 960px;
+  width: 85%;
+  min-height: 400px;
+  padding: 2.25%; 
+  text-align: center;
+  border-radius: 20px;
+}
 
 
 /* nvaigation bar */
