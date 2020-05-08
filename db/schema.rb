@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_05_07_212515) do
-=======
-ActiveRecord::Schema.define(version: 2020_05_07_181857) do
->>>>>>> e4d2f4625c664e7d1862a8d74a17adb56098cc48
 
   create_table "bikes", force: :cascade do |t|
     t.integer "owner_id"
