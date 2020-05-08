@@ -5,6 +5,15 @@
 <p><%= @renter.age %>
 <br><%= @renter.shop.name %></p>
 <br><br><br>
-<%= link_to 'log out', logout_path, method: :delete %>
+<h2>List of Rentals</h2>
+<% count = 1 %>
+<% @renter.rentals.each do |rental| %>
+    <h4>Rental Number: <%= count %></h4>
+    Bike Model: <%= link_to rental.bike.model, bike_path(rental.bike)%> <br> 
+    Bike Size: <%= rental.bike.size %> <br>
+    Bike Type: <%= rental.bike.bike_type %> <br><br>
+    <% count += 1 %>
+<% end %>
+
 
 
