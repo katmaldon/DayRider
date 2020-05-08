@@ -1,4 +1,7 @@
 <h1>All Renters</h1>
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% end %>
 <br><br>
 <% @renters.each do |renter| %>
   <p> <%= link_to renter.name, renter_path(renter) %>

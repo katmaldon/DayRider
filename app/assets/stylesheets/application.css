@@ -1,4 +1,4 @@
-/*
+  /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -14,6 +14,19 @@
  *= require_self
  */
 
+ body {
+  background-image: url('https://www.itl.cat/pngfile/big/22-228592_bicycle-art-wallpapers-hd-resolution-is-4k-wallpaper.jpg');
+    /* background-size: contain; */
+    background-attachment: fixed;
+    background-position: left;
+    background-color:white;
+    background-size: 100%;
+    color: whitesmoke;
+    text-align: center;
+  }
+
+
+
  h1 {
   background-color:black;
   background-size: 100%;
@@ -24,40 +37,41 @@
 
  }
 
- body {
-  background-image: url("https://www.itl.cat/pngfile/big/22-228592_bicycle-art-wallpapers-hd-resolution-is-4k-wallpaper.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: left;
-  background-color:white;
-  background-size: 100%;
-  color: whitesmoke;
-  text-align: right;
+
+
+/* nvaigation bar */
+ul li {
+  display: inline-block;
+  padding: 20px;
+  color: black;
+}
+
+li:hover {
+  background-color: orange;
+}
+
+ul {
+  text-align: left;
+  background-color: white;
+  margin: 0px auto;
 }
 
 a {
   text-decoration: none;
-  font-family: Palanquin;
-  font-size: 20px;
-  font-weight: bold;
+  color: black;
 }
 
 
-a:link {
-  color: white;
+.right {
+  float: right;
 }
-a:hover {
-  color: yellowgreen;
-}
-a:visited {
-  color: white;
 
-h1{
-}
+
 /* #if you set a div with a classname you can select it with dot notation ex: <div class="container"> . </div>
 you would select with .<classname>
 .container {
 }
 #selecting a anchor tag within a nav tag <nav> <%=link_to "whatever", user_path</nav>
 .nav a {                     <<<<can access nested tags this way
-} */
+} 
+*/

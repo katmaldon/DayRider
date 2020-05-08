@@ -8,6 +8,13 @@ class RentersController < ApplicationController
 
     def show
         @renter = Renter.find(params[:id])
+        # byebug
+        if @renter == @current_renter
+            render :show
+        else
+            flash[:error] = "Could only access your own profile page"
+            redirect_to renters_path
+        end
     end
 
     def new
