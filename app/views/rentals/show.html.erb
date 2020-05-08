@@ -1,9 +1,9 @@
 <h1>Bike Rental Details</h1>
 <br>
 
-<h2><%= @rental.bike.model %> </h2><br>
-<p><%= @rental.renter.name %> <br>
-<%= @rental.renter.shop.location%> <br><br>
+<h2><%= @rental.bike.model %> </h2>
+<p>Name: <%= @rental.renter.name %> <br><br>
+Location: <%= @rental.renter.shop.location%> <br><br>
 <% if @rental.comment && @rental.rating %>
     Comment: "<%= @rental.comment %>" <br><br>
     <%= @rental.rating %> Rating
@@ -15,6 +15,8 @@
 <% unless @rental.rating %>
     <%= button_to "Post a Comment & Rating", edit_rental_path(@rental), method: :get %>
 <% end %>
+
+<br>
 
 <%= button_to "Delete Rental", rental_path(@rental), method: :delete %>
 

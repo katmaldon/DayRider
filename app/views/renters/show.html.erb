@@ -2,16 +2,18 @@
 <br>
 
 <h2><%= @renter.name %></h2>
-<p><%= @renter.age %>
-<br><%= @renter.shop.name %></p>
-<br><br><br>
+<p>Age: <%= @renter.age %>
+<br>Primary Shop: <%= link_to @renter.shop.name, shop_path(@renter.shop) %></p>
+<br>
+<%= button_to 'Make a new reservation', bikes_path, method: :get %>
+<br><br>
 <h2>List of Rentals</h2>
 <% count = 1 %>
-<% @renter.rentals.each do |rental| %> 
-    <h4>Rental Number: <%= count %></h4>
-    Bike Model: <%= link_to rental.bike.model, bike_path(rental.bike)%> <br> 
-    Bike Size: <%= rental.bike.size %> <br>
-    Bike Type: <%= rental.bike.bike_type %> <br>
+<% @renter.rentals.each do |rental| %>
+    <h4>Total rentals: <%= count %></h4>
+    Bike model: <%= link_to rental.bike.model, bike_path(rental.bike)%> <br>
+    Bike size: <%= rental.bike.size %> <br>
+    Bike type: <%= rental.bike.bike_type %> <br><br>
     <%= button_to "Rental Details", rental_path(rental), method: :get %><br>
     <% count += 1 %>
 <% end %>

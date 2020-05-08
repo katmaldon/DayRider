@@ -10,16 +10,14 @@ bike_type = ["Pavement", "Multi-Use", "Mountain", "Electric", "Folding"]
 model = ["Pinarello", "Trek", "Raleigh", "Focus", "Felt", "Specialized", "Schwinn"]
 size = [ 24, 26, 28 ]
 bike_image = [
-    "https://ibb.co/hdLpxPP",
-    "https://ibb.co/CJwXnnY",
-    "https://ibb.co/ryMnmgg",
-    "https://ibb.co/RTt4xBn",
-    "https://ibb.co/4fdk46y",
-    "https://ibb.co/KmFXpwH",
-    "https://ibb.co/jDRt2Hy",
-    "https://ibb.co/dbsf9cB",
-    "https://ibb.co/xLWv7FY",
-   "https://i.ibb.co/rts95CP/mountain2.jpg"
+    "https://i.ibb.co/bvQpjSS/electric2.jpg",
+    "https://i.ibb.co/dbf3QQV/electricbike.jpg",
+    "https://i.ibb.co/PC4BNRR/folding2.jpg",
+    "https://i.ibb.co/rts95CP/mountain2.jpg",
+    "https://i.ibb.co/rts95CP/mountain2.jpg",
+    "https://i.ibb.co/BBNkxwy/multi2.jpg",
+    "https://i.ibb.co/ZHRfsJd/multibike.jpg",
+    "https://i.ibb.co/rts95CP/mountain2.jpg"
 ]
 
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]

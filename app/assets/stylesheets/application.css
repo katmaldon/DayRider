@@ -36,11 +36,11 @@
   margin-bottom: auto;
 
  }
- 
+
 /* Home page */
  .show-img {
-  width: 30%;
-  padding: 30px;
+  width: 45%;
+  padding: 20px;
   border-radius: 25px;
   background-color: rgba(177, 254, 255, 0.7);
 }
@@ -54,7 +54,7 @@
   max-width: 960px;
   width: 85%;
   min-height: 400px;
-  padding: 2.25%; 
+  padding: 2.25%;
   text-align: center;
   border-radius: 20px;
 }
@@ -94,5 +94,5 @@ you would select with .<classname>
 }
 #selecting a anchor tag within a nav tag <nav> <%=link_to "whatever", user_path</nav>
 .nav a {                     <<<<can access nested tags this way
-} 
+}
 */

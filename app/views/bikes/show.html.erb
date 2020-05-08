@@ -17,18 +17,15 @@
 <p><%= "Type: #{@bike.bike_type}" %></p>
 <br><br>
 
-<img src=<%=@bike.bike_img%> alt="Bike image" width="300" height="345">
+<img src=<%=@bike.bike_img%> alt="Bike image" width="30%" height="30%">
 
 <h3>Rating: <%= @bike.average_rating %></h3>
 
-# image
-# external link to buy this bike model? (stretch)
-<br><br>
-
 
 <h4> <%= button_to 'Reserve this bike', rentals_path, method: :post%></h4>
+<br><br>
+<h4><%= link_to "Back to all bikes", bikes_path %></h4>
 
-<h4><%= link_to "All bikes", bikes_path %></h4>
 
 
 
