@@ -19,7 +19,7 @@ bike_image = [
     "https://ibb.co/jDRt2Hy",
     "https://ibb.co/dbsf9cB",
     "https://ibb.co/xLWv7FY",
-    "https://ibb.co/ygBzbSS"
+   "https://i.ibb.co/rts95CP/mountain2.jpg"
 ]
 
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]

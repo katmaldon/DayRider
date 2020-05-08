@@ -7,7 +7,7 @@
 <p><%= @shop.location %>
 <br>
 <br>
-<%= link_to 'Reserve a bike', bikes_path %>
+<%= button_to 'Reserve a bike', bikes_path, method: :get %>
 <br>
 <br>
 <a href= <%= @shop.website %> > For all additional info please visit: <%= @shop.website %></a>

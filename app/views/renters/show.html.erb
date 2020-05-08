@@ -11,7 +11,8 @@
     <h4>Rental Number: <%= count %></h4>
     Bike Model: <%= link_to rental.bike.model, bike_path(rental.bike)%> <br> 
     Bike Size: <%= rental.bike.size %> <br>
-    Bike Type: <%= rental.bike.bike_type %> <br><br>
+    Bike Type: <%= rental.bike.bike_type %> <br>
+    <%= button_to "Rental Details", rental_path(rental), method: :get %><br>
     <% count += 1 %>
 <% end %>
 
