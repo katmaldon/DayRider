@@ -4,6 +4,8 @@
 <h2><%= @rental.bike.model %> </h2>
 <p>Name: <%= @rental.renter.name %> <br><br>
 Location: <%= @rental.renter.shop.location%> <br><br>
+Price per day: $<%= @rental.price.round%> <br><br>
+
 <% if @rental.comment && @rental.rating %>
     Comment: "<%= @rental.comment %>" <br><br>
     <%= @rental.rating %> Rating
